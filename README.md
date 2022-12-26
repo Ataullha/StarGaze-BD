@@ -1,10 +1,10 @@
 # Famous-BD-Persona-Identification
 
-### Description of Classifying Famous Bangladeshi Personalities Using Machine Learning Techniques
+#### Description of Classifying Famous Bangladeshi Personalities Using Machine Learning Techniques
 
 This machine learning-based web application is designed to classify and identify famous Bangladeshi personalities based on their photographs. By analyzing the visual features of the images and applying advanced algorithms, the application is able to accurately classify and recognize the individuals depicted in the photos.
 
-### Steps for Adding and Preprocessing Additional Dataset for Famous Bangladeshi Personality Classification
+#### Steps for Adding and Preprocessing Additional Dataset for Famous Bangladeshi Personality Classification
 
 - Create a new folder with at least 30-40 images of a specific person, ensuring that the images clearly show their face.
 - Rename the folder with the person's name (e.g. Mr Tom).
