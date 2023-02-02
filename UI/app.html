@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dropzone.min.css">
     <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="script.js" defer></script>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -15,129 +17,32 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light justify-content-center">
-        <a class="navbar-brand" href="#">Famous BD Persona Identification</a>
-    </nav>
+    
 
     <div class="container">
-        <div class="row">
-            <div class="col card-wrapper" data-player="Ayman Sadiq">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/ayman.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Ayman Sadiq</h4>
-                        </p>
-                    </div>
+        <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li style="float:right"><a class="active" href="#about">About</a></li>
+        </ul>
+        
+        <div class="row"> 
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="carousel">
+                  <img src="images/ayman.jpeg" alt="img" draggable="false">
+                  <img src="images/bangabandhu.jpeg" alt="img" draggable="false">
+                  <img src="images/humayun.jpeg" alt="img" draggable="false">
+                  <img src="images/jamilur.jpeg" alt="img" draggable="false">
+                  <img src="images/muhammad.jpeg" alt="img" draggable="false"> 
+                  <img src="images/runa.jpeg" alt="img" draggable="false"> 
+                  <img src="images/shahidul.jpeg" alt="img" draggable="false"> 
+                  <img src="images/shakib.jpeg" alt="img" draggable="false">
+                  <img src="images/sheikh.jpeg" alt="img" draggable="false">             
                 </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
             </div>
-            <div class="col card-wrapper" data-player="Bangabandhu Sheikh Mujibur Rahman">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/bangabandhu.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Bangabandhu Sheikh Mujibur Rahman</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col card-wrapper" data-player="Humayun Ahmed">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/humayun.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Humayun Ahmed</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col card-wrapper" data-player="Jamilur Reza Chowdhury">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/jamilur.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Jamilur Reza Chowdhury</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col card-wrapper" data-player="Muhammad Zafar Iqbal">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/muhammad.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Muhammad Zafar Iqbal</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col card-wrapper" data-player="Runa Laila">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/runa.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Runa Laila</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col card-wrapper" data-player="Shahidul Alam">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/shahidul.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Shahidul Alam</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col card-wrapper" data-player="Shakib Al Hasan">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/shakib.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Shakib Al Hasan</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col card-wrapper" data-player="Sheikh Hasina">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/sheikh.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Sheikh Hasina</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col card-wrapper" data-player="Wasfia Nazreen">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/wasfia.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Wasfia Nazreen</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
 
