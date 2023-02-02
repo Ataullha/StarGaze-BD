@@ -1,48 +1,14 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import joblib
 import json
 import numpy as np
 import base64
 import cv2
-import pywt
-
+from wavelet import w2d
 
 __class_name_to_number = {}
 __class_number_to_name = {}
 
 __model = None
-
-
-# In[2]:
-
-
-
-def w2d(img, mode='haar', level=1):
-    imArray = img
-    #Datatype conversions
-    #convert to grayscale
-    imArray = cv2.cvtColor( imArray,cv2.COLOR_RGB2GRAY )
-    #convert to float
-    imArray =  np.float32(imArray)
-    imArray /= 255;
-    # compute coefficients
-    coeffs=pywt.wavedec2(imArray, mode, level=level)
-
-    #Process Coefficients
-    coeffs_H=list(coeffs)
-    coeffs_H[0] *= 0;
-
-    # reconstruction
-    imArray_H=pywt.waverec2(coeffs_H, mode);
-    imArray_H *= 255;
-    imArray_H =  np.uint8(imArray_H)
-
-    return imArray_H
 
 def classify_image(image_base64_data, file_path=None):
 
@@ -66,17 +32,8 @@ def classify_image(image_base64_data, file_path=None):
 
     return result
 
-
-
-
-
-
 def class_number_to_name(class_num):
     return __class_number_to_name[class_num]
-
-
-
-
 
 def load_saved_artifacts():
     print("loading saved artifacts...start")
@@ -94,17 +51,6 @@ def load_saved_artifacts():
     print("loading saved artifacts...done")
 
 
-
-
-
-
-
-
-
-
-
-
-
 def get_cv2_image_from_base64_string(b64str):
     '''
     credit: https://stackoverflow.com/questions/33754935/read-a-base-64-encoded-image-from-memory-using-opencv-python-library
@@ -115,19 +61,6 @@ def get_cv2_image_from_base64_string(b64str):
     nparr = np.frombuffer(base64.b64decode(encoded_data), np.uint8)
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     return img
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def get_cropped_image_if_2_eyes(image_path, image_base64_data):
     face_cascade = cv2.CascadeClassifier('./opencv/haarcascades/haarcascade_frontalface_default.xml')
@@ -150,29 +83,20 @@ def get_cropped_image_if_2_eyes(image_path, image_base64_data):
                 cropped_faces.append(roi_color)
     return cropped_faces
 
-
-
-
-
-
-
-
-
-
-
-def get_b64_test_image_for_sakib():
+def get_b64_test_image_for_virat():
     with open("b64.txt") as f:
         return f.read()
 
-
-if __name__=='__main__':
+if __name__ == '__main__':
     load_saved_artifacts()
-    print(classify_image(get_b64_test_image_for_sakib(),None))
-    
 
+    print(classify_image(get_b64_test_image_for_virat(), None))
 
-# In[ ]:
-
-
-
-
+    # print(classify_image(None, "./test_images/federer1.jpg"))
+    # print(classify_image(None, "./test_images/federer2.jpg"))
+    # print(classify_image(None, "./test_images/virat1.jpg"))
+    # print(classify_image(None, "./test_images/virat2.jpg"))
+    # print(classify_image(None, "./test_images/virat3.jpg")) # Inconsistent result could be due to https://github.com/scikit-learn/scikit-learn/issues/13211
+    # print(classify_image(None, "./test_images/serena1.jpg"))
+    # print(classify_image(None, "./test_images/serena2.jpg"))
+    # print(classify_image(None, "./test_images/sharapova1.jpg"))
