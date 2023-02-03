@@ -1,187 +1,215 @@
 .card-wrapper {
-    margin: 0% 0;
-  }
-  
+  margin: 0% 0;
+}
+
 /* You can adjust the image size by increasing/decreasing the width, height */
 /* .custom-circle-image {
-  width: 10vw; /* note i used vw not px for better responsive
-  height: 10vw;
+width: 10vw; /* note i used vw not px for better responsive
+height: 10vw;
 }
 
 .custom-circle-image img {
-  object-fit: cover;
+object-fit: cover;
 } */
 
 @import url( 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' );
 @media all and (min-width : 200px){
-  ul {
-    list-style-type: none;
-    width: 100%;
-    /* margin-left: -130px;
-    margin-right: 100px;  */
-    /* margin: auto; */
-    margin:0;
-    padding: 0;
-    overflow: hidden;
-    /* max-width: 1500px; */
-    position: relative;
-    background-color: rgb(78, 77, 77);
-  }
+ul {
+  list-style-type: none;
+  width: 100%;
+  /* margin-left: -130px;
+  margin-right: 100px; 
+  margin: auto; */
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  /* max-width: 1500px; */
+  position: relative;
+  background-color: rgb(78, 77, 77);
+}
 }
 
 
 li {
-  float: left;
+float: left;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  width: 100%;
-  float: cover;
-  background-color: rgb(58, 57, 57);
+width: 100%;
+float: cover;
+background-color: rgb(58, 57, 57);
 }
 
 .active {
-  background-color: #04AA6D;
+background-color: #04AA6D;
 }
 
 .card-title {
-  letter-spacing: 1.1px;
+letter-spacing: 1.1px;
 }
 
 .card-text {
-  font-family: MerriweatherRegular;
-  font-size: 22px;
-  line-height: initial;
+font-family: MerriweatherRegular;
+font-size: 22px;
+line-height: initial;
 }
 
 .dropzone {
-  border-style: dashed;
+border-style: dashed;
 }
 
 
 .error {
-  font-family: MerriweatherRegular;
-  font-size: 30px;
-  line-height: initial;
-  color: blue;
-  text-align: center;
+font-family: MerriweatherRegular;
+font-size: 30px;
+line-height: initial;
+color: blue;
+text-align: center;
 }
 
 #classTable {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
 }
 
 #classTable td, #classTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
+border: 1px solid #ddd;
+padding: 8px;
 }
 
 #classTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #4CAF50;
+color: white;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 body{
-  display: flex;
-  padding: 0 35px;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
+display: flex;
+padding: 0px;
+margin: 0px;
+min-height: 100vh;
+align-items: center;
+justify-content: center;
+background: #ffffff;
 }
 .wrapper{
-  /* margin: 10%; */
-  display: flex;
-  max-width: 1200px;
-  position: relative;
+/* margin: 10%; */
+display: flex;
+max-width: 1200px;
+position: relative;
 }
 .wrapper i{
-  /* margin:10%; */
-  top: 50%;
-  height: 44px;
-  width: 44px;
-  color: #6e7486;
-  cursor: pointer;
-  font-size: 1.15rem;
-  position: absolute;
-  text-align: center;
-  line-height: 44px;
-  background: #fff;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.1s linear;
+/* margin:10%; */
+top: 50%;
+height: 44px;
+width: 44px;
+color: #6e7486;
+cursor: pointer;
+font-size: 1.15rem;
+position: absolute;
+text-align: center;
+line-height: 44px;
+background: #fff;
+border-radius: 50%;
+transform: translateY(-50%);
+transition: transform 0.1s linear;
 }
 .wrapper i:active{
-  transform: translateY(-50%) scale(0.9);
+transform: translateY(-50%) scale(0.9);
 }
 .wrapper i:hover{
-  background: #f2f2f2;
+background: #f2f2f2;
 }
 .wrapper i:first-child{
-  left: -22px;
-  display: none;
+left: -22px;
+display: none;
 }
 .wrapper i:last-child{
-  right: -22px;
+right: -22px;
 }
 .wrapper .carousel{
-  font-size: 0px;
-  cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  scroll-behavior: smooth;
+font-size: 0px;
+cursor: pointer;
+overflow: hidden;
+white-space: nowrap;
+scroll-behavior: smooth;
 }
 .carousel.dragging{
-  cursor: grab;
-  scroll-behavior: auto;
+cursor: grab;
+scroll-behavior: auto;
 }
 .carousel.dragging img{
-  pointer-events: none;
+pointer-events: none;
 }
 .carousel img{
-  height: 200px;
-  object-fit: cover;
-  user-select: none;
-  margin-left: 14px;
-  border-radius: 50%;
-  width: calc(40% / 2);
+height: 200px;
+object-fit: cover;
+user-select: none;
+margin-left: 14px;
+border-radius: 50%;
+width: calc(40% / 2);
 }
 .carousel img:first-child{
-  margin-left: 0px;
+margin-left: 0px;
 }
 
 @media screen and (max-width: 900px) {
-  .carousel img{
-    width: calc(100% / 2);
-  }
+.carousel img{
+  width: calc(100% / 2);
+}
 }
 
 @media screen and (max-width: 550px) {
-  .carousel img{
-    width: 100%;
-  }
+.carousel img{
+  width: 100%;
+}
+}
+
+.container{
+width:100%;
+margin-left:0%;
+margin-right: 0%;
+display:block;
 }
 
 .row{
-  margin:5%;
+margin-top:5%;
+margin-bottom: 5%;
+}
+
+.about{
+  background-color: #bbc0ce;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 0%;
+  margin-bottom: -16px;
+}
+
+.foot{
+  color: white;
+  background-color: rgb(78, 77, 77);
+  width: 100%;
+  text-align: left;
+  position: relative;
+  margin: 0%;
+  padding: 0px;
 }
